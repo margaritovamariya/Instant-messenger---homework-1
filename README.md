@@ -1,6 +1,8 @@
 ﻿# &lt;tab-panel&gt; element
 
 ## Purpose
+To implement a prototype page that displays a list of channels and allows switching between them. The messages in them may be fixed.
+USING tab panel
 The goal of this component is to display tabs controll. It supports vertical and horizontal tabs.
 ## Usage
 
