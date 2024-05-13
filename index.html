@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tab module test page</title>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript">
+        let App = function () {
+            const tab = document.querySelector('tab-panel');
+            document.querySelectorAll('input[type=radio]').forEach(e => {
+                e.addEventListener('click', (ev) => {
+                    tab.setAttribute('type', ev.target.value);
+                });
+            });
+        };
+        window.addEventListener('load', () => {
+            App();
+        });
+    </script>
+</head>
+
+<body style="margin:0;">
+    <tab-panel type="column">
+        
+        <h3 slot="tab" class="selected">
+            <img src="img-1.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            Въпроси ООП</h3>
+        <div slot="content" class="selected">
+            <div id="message-container">
+                
+                <input type="text" id="message-input" placeholder="Напишете съобщение...">
+        
+                <button id="send-button">Изпрати</button>
+            </div>
+            <div class="left">
+                <h4 class="name"><img src="icon-1.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                    Annonymous monkey:</h4>
+                <h4 class="written">Здравейте. Имам въпрос относно домашното. Когато имаме ефект за  увеличаване на звука, трябва ли да гледаме границата?</h4>
+            </div>
+            <div class="right">
+                <h4 class="name"><img src="icon-2.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            
+                    Ivan Ivanov</h4>
+                <h4 class="written">Тези, които карат ИД практикум задължително ще решават допълнителна задача. За останалите е по решение на изпитващия.</h4>
+            </div>
+            <div class="left">
+                <h4 class="name"><img src="icon-1.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                
+                    Anonymous monkey:</h4>
+                <h4 class="written">Защитите общодостъпни ли са, мога ли ако съм от ИС да ида утре на някоя защита на ИНФ,  за да видя горе-долу как протича?
+                </h4>
+            </div>
+            <div class="left">
+                <h4 class="name"><img src="icon-3.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                   Anonymous elephant:</h4>
+                <h4 class="written">Кога ще излезе разпределението на защитите за ИС?</h4>
+            </div>
+            <div class="right">
+                <h4 class="name"><img src="icon-2.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                   Ivan Ivanov</h4>
+                <h4 class="written">След няколко минутки ще получите имейл с разпределението.
+                </h4>
+            </div>
+            <div class="left">
+                <h4 class="name"><img src="icon-4.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                    Anonymous donkey:</h4>
+                <h4 class="written">Здравейте,
+                    Желая да попитам има ли яснота кога ще излезнат датите за домашното и защитата по ООП за специалност Информатика?</h4>
+            </div>
+            <div class="left">
+                <h4 class="name"><img src="icon-5.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                  Anonymous cat:</h4>
+
+                <h4 class="written">Следете сайта на ФМИ за датите за поправителната сесия. Домашното ще е някъде до средата на август</h4>
+            </div>
+            <div class="right">
+                <h4 class="name"><img src="icon-2.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                   Ivan Ivanov</h4>
+                <h4 class="written">а проекта за поправителната сесия същия ли си остава като този който сме избрали и започнали през редовната</h4>
+            </div>
+            <div class="left">
+                <h4 class="name"><img src="icon-3.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+                 Anonymous panda:</h4>
+
+                <h4 class="written">Да. Има и възможност да го смените с друг, но трябва да се договорим за което.</h4>
+            </div>
+
+        </div>
+        <h3 slot="tab">
+            <img src="img-2.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            ИНФ Системи ИЗПИТИ</h3>
+
+        <div slot="content" class="selected"> <h5 style="color: white;">IMPLEMENTATION SAME AS THE FIRST CHANNEL...</h5>
+        </div>
+        <h3 slot="tab">
+            <img src="img-3.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+             Уеб технологии - 2024</h3>
+        <div slot="content"> <h5 style="color: white;">IMPLEMENTATION SAME AS THE FIRST CHANNEL...</h5></div>
+        <h3 slot="tab">
+            <img src="img-1.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            Цифрови медии</h3>
+        <div slot="content">
+            <object type="text/html" data="helper.html" style="width: 60vw; height: 100vh"></object></div>
+        <h3 slot="tab">
+            <img src="img-4.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            АПИС - студенти</h3>
+        <div slot="content"> <h5 style="color: white;">IMPLEMENTATION SAME AS THE FIRST CHANNEL...</h5></div>
+        <h3 slot="tab">
+            <img src="img-5.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            АПИС - ЕКИП 1.1</h3>
+        <div slot="content"> <h5 style="color: white;">IMPLEMENTATION SAME AS THE FIRST CHANNEL...</h5></div>
+        <h3 slot="tab">
+            <img src="img-2.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            РИТАРХ - 2024 ВЪПРОСИ</h3>
+        <div slot="content"> <h5 style="color: white;">IMPLEMENTATION SAME AS THE FIRST CHANNEL...</h5></div>
+        <h3 slot="tab">
+            <img src="img-3.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            Дата за поправки - 2024</h3>
+        <div slot="content"> <h5 style="color: white;">IMPLEMENTATION SAME AS THE FIRST CHANNEL...</h5></div>
+        <h3 slot="tab">
+            <img src="img-4.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            Лятна сесия - дати за изпити</h3>
+        <div slot="content"> <h5 style="color: white;">IMPLEMENTATION SAME AS THE FIRST CHANNEL...</h5></div>
+        <h3 slot="tab">
+            <img src="img-5.png" alt="Chanel 1 Image" style="width: 20px; height: 20px; margin-right: 10px;">
+            Изираеми дисциплини</h3>
+        <div slot="content"></div>
+      
+    </tab-panel>
+
+  
+
+    
+</body>
+
+</html>
